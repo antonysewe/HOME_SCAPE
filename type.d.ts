@@ -1,7 +1,5 @@
 interface AuthState {
     isSignedIn: boolean;
-    userName: string | null,
-    userId: string | null,
     userName: string | null;
     userId: string | null;
 }
@@ -89,8 +87,6 @@ interface CardProps {
 
 type AuthContext = {
     isSignedIn: boolean;
-    userName: string | null,
-    userId: string | null,
     userName: string | null;
     userId: string | null;
     refreshAuth: () => Promise<boolean>;
@@ -123,4 +119,9 @@ interface StoreHostedImageParams {
 interface CreateProjectParams {
     item: DesignItem;
     visibility?: "private" | "public";
+}
+
+interface Generate3DViewParams {
+    sourceImage: string;
+    projectId?: string | null;
 }
